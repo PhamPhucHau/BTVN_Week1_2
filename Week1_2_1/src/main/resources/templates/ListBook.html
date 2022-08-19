@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        span{
+            font-family: verdana;
+            font-size: 20px;
+            margin: 5px;
+            padding: 3px;
+
+        }
+    </style>
+</head>
+<body>
+<ul>
+    <li th:each="info: ${listBooks}">
+         <a th:href="@{'/'+${info.id}}"><span th:text="*{info.id}"></span> </a>:<span th:text="*{info.name}"></span>:<span th:text="*{info.author}"></span>:<span th:text="*{info.year}"></span>
+
+
+    </li>
+</ul>
+
+</body>
+</html>
